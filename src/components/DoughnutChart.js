@@ -11,11 +11,14 @@ const DoughnutChart = ({ chartData }) => {
         options={{
             plugins:{
             legend: {
-                display: false,
+                display: true,
             },
             subtitle: {
                 display: true,
                 text: "Balance Score"
+            },
+            scale: {
+                display: false
             },
             backgroundColor: "#31356e"
             }}

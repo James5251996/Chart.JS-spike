@@ -8,6 +8,8 @@ import PieChart from "../src/components/PieChart"
 import BarChart from '../src/components/BarChart';
 import DoughnutChart from '../src/components/DoughnutChart';
 import { CircleSlider } from "react-circle-slider";
+import LineChart from './components/LineChart';
+import RadarChart from './components/RadarChart';
 
 
 Chart.register(CategoryScale);
@@ -55,6 +57,8 @@ function App() {
         <PieChart chartData={chartData} />
         <BarChart chartData={chartData}></BarChart>
         <DoughnutChart chartData={chartData} />
+        <LineChart chartData={chartData}/>
+        <RadarChart chartData={chartData}/>
         <h2>Circluar Slider</h2>
         <div className='AppCircle'>
       <div className="textContainer">
