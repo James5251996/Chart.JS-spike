@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import '../src/App.css';
 import Chart from 'chart.js/auto';
 import { CategoryScale } from "chart.js";
 import { useState, useRef } from "react";
@@ -20,10 +20,12 @@ function App() {
         label: "Users Gained ",
         data: Data.map((data) => data.userGain),
         backgroundColor: [
-          "rgba(75,192,192,1)",
-          "#50AF95",
-          "#f3ba2f",
-          "#2a71d0"
+          "#31356e",
+          "#6ce5e8",
+          "#41b8d5",
+          "#2f5f98 ",
+          "#704e85"
+
         ],
         borderColor: "black",
         borderWidth: 2
@@ -31,7 +33,7 @@ function App() {
     ]
   });
   
-  const [value, changeValue] = useState(20);
+  const [value, setChangeValue] = useState(200);
   const slider = useRef(null);
 
   return (
@@ -54,18 +56,26 @@ function App() {
         <BarChart chartData={chartData}></BarChart>
         <DoughnutChart chartData={chartData} />
         <h2>Circluar Slider</h2>
+        <div className='AppCircle'>
+      <div className="textContainer">
+        {value}
+        <div className="minute">MINUTES</div>
+      </div>
         <CircleSlider
           ref={slider}
           value={value}
-          stepSize={5}
-          onChange={value => changeValue(value)}
+          stepSize={1}
+          onChange={value => setChangeValue(value)}
           size={250}
-          max={120}
+          max={501}
           gradientColorFrom="#ec008c"
           gradientColorTo="#fc6767"
-          knobRadius={20}
+          knobRadius={15}
           circleWidth={20}
+          disabled={true}
         />
+        </div>
+        <input type="number" onChange={(event) => setChangeValue(event.target.value)}></input>
       </header>
     </div>
   );

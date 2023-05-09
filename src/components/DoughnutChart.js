@@ -16,7 +16,8 @@ const DoughnutChart = ({ chartData }) => {
             subtitle: {
                 display: true,
                 text: "Balance Score"
-            }
+            },
+            backgroundColor: "#31356e"
             }}
         }>
         </Doughnut>
