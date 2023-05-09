@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Data } from "./utils/Data";
 import PieChart from "../src/components/PieChart"
 import BarChart from '../src/components/BarChart';
+import DoughnutChart from '../src/components/DoughnutChart';
 
 
 Chart.register(CategoryScale);
@@ -48,6 +49,7 @@ function App() {
         <p>Using Chart.js in React</p>
         <PieChart chartData={chartData} />
         <BarChart chartData={chartData}></BarChart>
+        <DoughnutChart chartData={chartData} />
       </header>
     </div>
   );
