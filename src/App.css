@@ -49,13 +49,13 @@
   font-size: 80px;
   line-height: 70px;
   text-align: center;
-  color: #ec008c;
+  color: #2ab6ae;
 }
 
 .textContainer .minute {
   font-size: 18px;
   line-height: 15px;
-  background: -webkit-linear-gradient(#ec008c, #fc6767);
+  background: -webkit-linear-gradient(#2ab6ae,  #6ce5e8);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

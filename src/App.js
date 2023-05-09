@@ -68,11 +68,11 @@ function App() {
           onChange={value => setChangeValue(value)}
           size={250}
           max={501}
-          gradientColorFrom="#ec008c"
-          gradientColorTo="#fc6767"
+          gradientColorFrom="#6ce5e8"
+          gradientColorTo="#2f5f98"
           knobRadius={15}
           circleWidth={20}
-          disabled={true}
+          // disabled={true}
         />
         </div>
         <input type="number" onChange={(event) => setChangeValue(event.target.value)}></input>
