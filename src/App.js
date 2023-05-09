@@ -2,11 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import Chart from 'chart.js/auto';
 import { CategoryScale } from "chart.js";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Data } from "./utils/Data";
 import PieChart from "../src/components/PieChart"
 import BarChart from '../src/components/BarChart';
 import DoughnutChart from '../src/components/DoughnutChart';
+import { CircleSlider } from "react-circle-slider";
 
 
 Chart.register(CategoryScale);
@@ -30,6 +31,8 @@ function App() {
     ]
   });
   
+  const [value, changeValue] = useState(20);
+  const slider = useRef(null);
 
   return (
     <div className="App">
@@ -50,6 +53,19 @@ function App() {
         <PieChart chartData={chartData} />
         <BarChart chartData={chartData}></BarChart>
         <DoughnutChart chartData={chartData} />
+        <h2>Circluar Slider</h2>
+        <CircleSlider
+          ref={slider}
+          value={value}
+          stepSize={5}
+          onChange={value => changeValue(value)}
+          size={250}
+          max={120}
+          gradientColorFrom="#ec008c"
+          gradientColorTo="#fc6767"
+          knobRadius={20}
+          circleWidth={20}
+        />
       </header>
     </div>
   );
