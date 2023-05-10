@@ -17,7 +17,7 @@ function PieChart({ chartData }) {
     },
     {
       title: "Occupation",
-      balanceScore: 75
+      balanceScore: 300
     },
     {
       title: "Activity",
@@ -60,7 +60,7 @@ function PieChart({ chartData }) {
             plugins: {
               title: {
                 display: true,
-                text: "Users Gained between 2016-2020"
+                text: "Balance Score for the Day"
               }
             }
           }}

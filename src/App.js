@@ -7,7 +7,7 @@ import { Data } from "./utils/Data";
 import PieChart from "../src/components/PieChart"
 import BarChart from '../src/components/BarChart';
 import DoughnutChart from '../src/components/DoughnutChart';
-import { CircleSlider } from "react-circle-slider";
+
 import LineChart from './components/LineChart';
 import RadarChart from './components/RadarChart';
 
@@ -35,8 +35,7 @@ function App() {
     ]
   });
   
-  const [value, setChangeValue] = useState(200);
-  const slider = useRef(null);
+
 
   return (
     <div className="App">
@@ -59,27 +58,7 @@ function App() {
         <DoughnutChart chartData={chartData} />
         <LineChart chartData={chartData}/>
         <RadarChart chartData={chartData}/>
-        <h2>Circluar Slider</h2>
-        <div className='AppCircle'>
-      <div className="textContainer">
-        {value}
-        <div className="minute">MINUTES</div>
-      </div>
-        <CircleSlider
-          ref={slider}
-          value={value}
-          stepSize={1}
-          onChange={value => setChangeValue(value)}
-          size={250}
-          max={501}
-          gradientColorFrom="#6ce5e8"
-          gradientColorTo="#2f5f98"
-          knobRadius={15}
-          circleWidth={20}
-          // disabled={true}
-        />
-        </div>
-        <input type="number" onChange={(event) => setChangeValue(event.target.value)}></input>
+       
       </header>
     </div>
   );
