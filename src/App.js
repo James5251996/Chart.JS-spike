@@ -19,7 +19,7 @@ function App() {
     labels: Data.map((data) => data.year), 
     datasets: [
       {
-        label: "Users Gained ",
+        label: "Balance Score",
         data: Data.map((data) => data.userGain),
         backgroundColor: [
           "#31356e",
@@ -29,8 +29,8 @@ function App() {
           "#704e85"
 
         ],
-        borderColor: "black",
-        borderWidth: 2
+        borderColor: "white",
+        borderWidth: 1
       }
     ]
   });

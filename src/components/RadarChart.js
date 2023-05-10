@@ -11,7 +11,7 @@ const RadarChart = ({ chartData }) => {
                         scales: {
                             y: {
                                 ticks: {
-                                    display: true
+                                    display: false
                                 }
                             }
                         }
