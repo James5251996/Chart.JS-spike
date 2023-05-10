@@ -3,7 +3,7 @@ export const Data = [
     {
       id: 1,
       year: "Movement",
-      userGain: 8000,
+      userGain: 25000,
       userLost: 823
     },
     {

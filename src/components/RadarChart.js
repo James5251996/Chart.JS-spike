@@ -82,17 +82,15 @@ const RadarChart = ({ chartData }) => {
             <Radar
                 data={radarChartData}
                 options={{
-
                         scales: {
                             r: {
                                 ticks: {
                                     color: "#6ce5e8",
                                     font: 1,
-                                    showLabelBackdrop: true
+                                    showLabelBackdrop: false
                                 }
                             }
                         }
-                    
                 }}
             />
         </div>
