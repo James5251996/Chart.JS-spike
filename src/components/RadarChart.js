@@ -8,6 +8,7 @@ const RadarChart = ({ chartData }) => {
     const [foodScore, setFoodScore] = useState(34);
     const [oScore, setOScore] = useState(78);
     const [aScore, setAScore] = useState(80);
+    // this is the data that gets used for the chart. Just a array of objects
     const DataforRadarChart = [
         {
             title: "Movement",
@@ -90,7 +91,8 @@ const RadarChart = ({ chartData }) => {
                                     showLabelBackdrop: false
                                 }
                             }
-                        }
+                        },
+                       fill: false,
                 }}
             />
         </div>
@@ -112,7 +114,7 @@ const RadarChart = ({ chartData }) => {
            gradientColorTo="#2f5f98"
            knobRadius={15}
            circleWidth={20}
-            disabled={true}
+            // disabled={true}
          />
          </div>
          
