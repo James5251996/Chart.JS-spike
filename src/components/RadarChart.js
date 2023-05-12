@@ -31,7 +31,7 @@ const RadarChart = ({ chartData }) => {
             balanceScore: aScore
         },
     ]
-
+    // this is the state that gets used to take in the data and set the labels and the amounts and assignes colors for each.
     const [radarChartData, setRadarChartData] = useState({
         labels: DataforRadarChart.map(data => data.title),
         datasets: [
